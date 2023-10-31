@@ -32,4 +32,4 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd /apps/ltijs-demo-server && git pull && npm install && npm run start &
+          cd /apps/ltijs-demo-server && git pull && npm install

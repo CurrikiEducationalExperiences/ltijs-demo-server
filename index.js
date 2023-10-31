@@ -19,10 +19,10 @@ lti.setup(process.env.LTI_KEY,
   {
     plugin: db // Passing db object to plugin field
   },
-  // {
-  //   url: 'mongodb://' + process.env.DB_HOST + '/' + process.env.DB_NAME + '?authSource=admin',
-  //   connection: { user: process.env.DB_USER, pass: process.env.DB_PASS }
-  // },
+  /* {
+    url: 'mongodb://' + process.env.DB_HOST + '/' + process.env.DB_NAME + '?authSource=admin',
+    connection: { user: process.env.DB_USER, pass: process.env.DB_PASS }
+  }, */
   {
     tokenMaxAge: false,
     staticPath: path.join(__dirname, './public'), // Path to static files

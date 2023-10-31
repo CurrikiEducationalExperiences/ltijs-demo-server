@@ -45,6 +45,7 @@ lti.setup(process.env.LTI_KEY,
 
 // When receiving successful LTI launch redirects to app
 lti.onConnect(async (token, req, res) => {
+  console.log('token:', token, 'req:', req, 'res:', res);
   return res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
@@ -71,6 +72,8 @@ const setup = async () => {
     accesstokenEndpoint: 'http://localhost/moodle/mod/lti/token.php',
     authConfig: { method: 'JWK_SET', key: 'http://localhost/moodle/mod/lti/certs.php' }
   }) */
+
+  await lti.deletePlatformById('208830000000000128');
 
   await lti.registerPlatform({
     url: "https://canvas.instructure.com",

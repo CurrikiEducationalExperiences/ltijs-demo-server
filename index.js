@@ -73,7 +73,7 @@ const setup = async () => {
   }) */
 
   await lti.registerPlatform({
-    url: "https://canvas.instructure.com",
+    url: "https://curriki.instructure.com",
     name: "curriki",
     clientId: "208830000000000128",
     authenticationEndpoint: "https://curriki.instructure.com/api/lti/authorize_redirect",

@@ -114,6 +114,9 @@ router.get('/info', async (req, res) => {
   if (context.roles) info.roles = context.roles
   if (context.context) info.context = context.context
 
+  info.context.errors = { errors : {} }
+  if (info.context.errors) info.context.errors = []
+
   return res.send(info)
 })
 
